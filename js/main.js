@@ -107,136 +107,294 @@ sectionFirstButton.addEventListener("click", () => {
 //----------    STEP 2    ----------
 
 let btnVanila = document.querySelector(".button__vanila");
-btnVanila.addEventListener("click", () => {
+let VanilaLine = document.querySelector(".main__section-main-DLC-Vanila-line");
+let VanilaTitle = document.querySelector(".main__section-main-DLC-Vanila-title");
+btnVanila.addEventListener("click", funcBtnVanila)
+function funcBtnVanila() {
   btnVanila.classList.toggle("btn-active")
+  VanilaLine.classList.toggle("main__section-main-DLC-Vanila-line-Active")
+  VanilaTitle.classList.toggle("main__section-main-DLC-Vanila-title-Active")
   if (btnVanila.classList.contains("btn-active")) {
     selectedNations.push(Vanilla)
   } else {
     let VanilaPosition = selectedNations.indexOf(Vanilla);
     selectedNations.splice(VanilaPosition, 1);
   }
-});
+}
 
 let btnRiseAndFall = document.querySelector(".button__rise-and-fall");
-btnRiseAndFall.addEventListener("click", () => {
+let RiseLine = document.querySelector(".main__section-main-DLC-Rise-line");
+let RiseTitle = document.querySelector(".main__section-main-DLC-Rise-title");
+btnRiseAndFall.addEventListener("click", funcbtnRiseAndFall)
+function funcbtnRiseAndFall() {
   btnRiseAndFall.classList.toggle("btn-active")
+  RiseLine.classList.toggle("main__section-main-DLC-Rise-line-Active")
+  RiseTitle.classList.toggle("main__section-main-DLC-Rise-title-Active")
   if (btnRiseAndFall.classList.contains("btn-active")) {
     selectedNations.push(RiseAndFall)
   } else {
     let riseAndFallPosition = selectedNations.indexOf(RiseAndFall);
     selectedNations.splice(riseAndFallPosition, 1);
   }
-});
+}
 
 let btnGatheringStorm = document.querySelector(".button__gathering-storm");
-btnGatheringStorm.addEventListener("click", () => {
+let GatheringLine = document.querySelector(".main__section-main-DLC-Gathering-line");
+let GatheringTitle = document.querySelector(".main__section-main-DLC-Gathering-title");
+btnGatheringStorm.addEventListener("click", funcbtnGatheringStorm)
+function funcbtnGatheringStorm() {
   btnGatheringStorm.classList.toggle("btn-active")
+  GatheringLine.classList.toggle("main__section-main-DLC-Gathering-line-Active")
+  GatheringTitle.classList.toggle("main__section-main-DLC-Gathering-title-Active")
   if (btnGatheringStorm.classList.contains("btn-active")) {
     selectedNations.push(GatheringStorm)
   } else {
     let gatheringStormPosition = selectedNations.indexOf(GatheringStorm);
     selectedNations.splice(gatheringStormPosition,1)
   }
-});
-
-let btnPoland = document.querySelector(".button__poland");
-btnPoland.addEventListener("click", () => {
-  btnPoland.classList.toggle("btn-active")
-  if (btnPoland.classList.contains("btn-active")) {
-    selectedNations.push(Poland)
-  } else {
-    let PolandPosition = selectedNations.indexOf(Poland);
-    selectedNations.splice(PolandPosition,1)
-  }
-});
-
-let btnAustralia = document.querySelector(".button__australia");
-btnAustralia.addEventListener("click", () => {
-  btnAustralia.classList.toggle("btn-active")
-  if (btnAustralia.classList.contains("btn-active")) {
-    selectedNations.push(Australia)
-  } else {
-    let AustraliaPosition = selectedNations.indexOf(Australia);
-    selectedNations.splice(AustraliaPosition,1)
-  }
-});
-
-let btnPersiaAndMacedon = document.querySelector(".button__persia-and-macedon");
-btnPersiaAndMacedon.addEventListener("click", () => {
-  btnPersiaAndMacedon.classList.toggle("btn-active")
-  if (btnPersiaAndMacedon.classList.contains("btn-active")) {
-    selectedNations.push(PersiaAndMacedon)
-  } else {
-    let PersiaAndMacedonPosition = selectedNations.indexOf(PersiaAndMacedon);
-    selectedNations.splice(PersiaAndMacedonPosition,1)
-  }
-});
-
-let btnNubia = document.querySelector(".button__nubia");
-btnNubia.addEventListener("click", () => {
-  btnNubia.classList.toggle("btn-active")
-  if (btnNubia.classList.contains("btn-active")) {
-    selectedNations.push(Nubia)
-  } else {
-    let NubiaPosition = selectedNations.indexOf(Nubia);
-    selectedNations.splice(NubiaPosition,1)
-  }
-});
-
-let btnKhmerAndIndonesia = document.querySelector(".button__khmer-and-indonesia");
-btnKhmerAndIndonesia.addEventListener("click", () => {
-  btnKhmerAndIndonesia.classList.toggle("btn-active")
-  if (btnKhmerAndIndonesia.classList.contains("btn-active")) {
-    selectedNations.push(KhmerAndIndonesia)
-  } else {
-    let KhmerAndIndonesiaPosition = selectedNations.indexOf(KhmerAndIndonesia);
-    selectedNations.splice(KhmerAndIndonesiaPosition,1)
-  }
-});
-
-let btnMayaAndGrancolombia = document.querySelector(".button__maya-and-gran-colombia");
-btnMayaAndGrancolombia.addEventListener("click", () => {
-  btnMayaAndGrancolombia.classList.toggle("btn-active")
-  if (btnMayaAndGrancolombia.classList.contains("btn-active")) {
-    selectedNations.push(MayaAndGrancolombia)
-  } else {
-    let MayaAndGrancolombiaPosition = selectedNations.indexOf(MayaAndGrancolombia);
-    selectedNations.splice(MayaAndGrancolombiaPosition,1)
-  }
-});
-
-let btnEthiopia = document.querySelector(".button__ethiopia");
-btnEthiopia.addEventListener("click", () => {
-  btnEthiopia.classList.toggle("btn-active")
-  if (btnEthiopia.classList.contains("btn-active")) {
-    selectedNations.push(Ethiopia)
-  } else {
-    let EthiopiaPosition = selectedNations.indexOf(Ethiopia);
-    selectedNations.splice(EthiopiaPosition,1)
-  }
-});
+}
 
 let btnPersonaPack = document.querySelector(".button__persona-pack");
-btnPersonaPack.addEventListener("click", () => {
+let PersonaLine = document.querySelector(".main__section-New-Frontier-Persona-line");
+let PersonaTitle = document.querySelector(".main__section-New-Frontier-Persona-title");
+btnPersonaPack.addEventListener("click", funcbtnPersonaPack)
+function funcbtnPersonaPack() {
   btnPersonaPack.classList.toggle("btn-active")
+  PersonaLine.classList.toggle("main__section-New-Frontier-Persona-line-Active")
+  PersonaTitle.classList.toggle("main__section-New-Frontier-Persona-title-Active")
   if (btnPersonaPack.classList.contains("btn-active")) {
     selectedNations.push(PersonaPack)
   } else {
     let PersonaPackPosition = selectedNations.indexOf(PersonaPack);
     selectedNations.splice(PersonaPackPosition,1)
   }
-});
+}
 
 let btnByzantiumAndGaul = document.querySelector(".button__byzantium-and-gaul");
-btnByzantiumAndGaul.addEventListener("click", () => {
+let ByzantiumGaulLine = document.querySelector(".main__section-New-Frontier-ByzantiumGaul-line");
+let ByzantiumGaulTitle = document.querySelector(".main__section-New-Frontier-ByzantiumGaul-title");
+btnByzantiumAndGaul.addEventListener("click", funcbtnByzantiumAndGaul)
+function funcbtnByzantiumAndGaul() {
   btnByzantiumAndGaul.classList.toggle("btn-active")
+  ByzantiumGaulLine.classList.toggle("main__section-New-Frontier-ByzantiumGaul-line-Active")
+  ByzantiumGaulTitle.classList.toggle("main__section-New-Frontier-ByzantiumGaul-title-Active")
   if (btnByzantiumAndGaul.classList.contains("btn-active")) {
     selectedNations.push(ByzantiumAndGaul)
   } else {
     let ByzantiumAndGaulPosition = selectedNations.indexOf(ByzantiumAndGaul);
     selectedNations.splice(ByzantiumAndGaulPosition,1)
   }
-});
+}
+
+let btnMayaAndGrancolombia = document.querySelector(".button__maya-and-gran-colombia");
+let MayaGranColombiaLine = document.querySelector(".main__section-New-Frontier-MayaGranColombia-line");
+let MayaGranColombiaTitle = document.querySelector(".main__section-New-Frontier-MayaGranColombia-title");
+btnMayaAndGrancolombia.addEventListener("click", funcbtnMayaAndGrancolombia)
+function funcbtnMayaAndGrancolombia() {
+  btnMayaAndGrancolombia.classList.toggle("btn-active")
+  MayaGranColombiaLine.classList.toggle("main__section-New-Frontier-MayaGranColombia-line-Active")
+  MayaGranColombiaTitle.classList.toggle("main__section-New-Frontier-MayaGranColombia-title-Active")
+  if (btnMayaAndGrancolombia.classList.contains("btn-active")) {
+    selectedNations.push(MayaAndGrancolombia)
+  } else {
+    let MayaAndGrancolombiaPosition = selectedNations.indexOf(MayaAndGrancolombia);
+    selectedNations.splice(MayaAndGrancolombiaPosition,1)
+  }
+}
+
+let btnEthiopia = document.querySelector(".button__ethiopia");
+let EthiopiaLine = document.querySelector(".main__section-New-Frontier-Ethiopia-line");
+let EthiopiaTitle = document.querySelector(".main__section-New-Frontier-Ethiopia-title");
+btnEthiopia.addEventListener("click", funcbtnEthiopia)
+function funcbtnEthiopia() {
+  btnEthiopia.classList.toggle("btn-active")
+  EthiopiaLine.classList.toggle("main__section-New-Frontier-Ethiopia-line-Active")
+  EthiopiaTitle.classList.toggle("main__section-New-Frontier-Ethiopia-title-Active")
+  if (btnEthiopia.classList.contains("btn-active")) {
+    selectedNations.push(Ethiopia)
+  } else {
+    let EthiopiaPosition = selectedNations.indexOf(Ethiopia);
+    selectedNations.splice(EthiopiaPosition,1)
+  }
+}
+
+let btnKhmerAndIndonesia = document.querySelector(".button__khmer-and-indonesia");
+let KhmerAndIndonesiaLine = document.querySelector(".main__section-Civ-Packs-KhmerIndonesia-line");
+let KhmerAndIndonesiaTitle = document.querySelector(".main__section-Civ-Packs-KhmerIndonesia-title");
+btnKhmerAndIndonesia.addEventListener("click", funcbtnKhmerAndIndonesia)
+function funcbtnKhmerAndIndonesia() {
+  btnKhmerAndIndonesia.classList.toggle("btn-active")
+  KhmerAndIndonesiaLine.classList.toggle("main__section-Civ-Packs-KhmerIndonesia-line-Active")
+  KhmerAndIndonesiaTitle.classList.toggle("main__section-Civ-Packs-KhmerIndonesia-title-Active")
+  if (btnKhmerAndIndonesia.classList.contains("btn-active")) {
+    selectedNations.push(KhmerAndIndonesia)
+  } else {
+    let KhmerAndIndonesiaPosition = selectedNations.indexOf(KhmerAndIndonesia);
+    selectedNations.splice(KhmerAndIndonesiaPosition,1)
+  }
+}
+
+let btnPersiaAndMacedon = document.querySelector(".button__persia-and-macedon");
+let PersiaAndMacedonLine = document.querySelector(".main__section-Civ-Packs-PersiaMacedon-line");
+let PersiaAndMacedonTitle = document.querySelector(".main__section-Civ-Packs-PersiaMacedon-title");
+btnPersiaAndMacedon.addEventListener("click", funcbtnPersiaAndMacedon)
+function funcbtnPersiaAndMacedon() {
+  btnPersiaAndMacedon.classList.toggle("btn-active")
+  PersiaAndMacedonLine.classList.toggle("main__section-Civ-Packs-PersiaMacedon-line-Active")
+  PersiaAndMacedonTitle.classList.toggle("main__section-Civ-Packs-PersiaMacedon-title-Active")
+  if (btnPersiaAndMacedon.classList.contains("btn-active")) {
+    selectedNations.push(PersiaAndMacedon)
+  } else {
+    let PersiaAndMacedonPosition = selectedNations.indexOf(PersiaAndMacedon);
+    selectedNations.splice(PersiaAndMacedonPosition,1)
+  }
+}
+
+let btnAustralia = document.querySelector(".button__australia");
+let AustraliaLine = document.querySelector(".main__section-Civ-Packs-Australia-line");
+let AustraliaTitle = document.querySelector(".main__section-Civ-Packs-Australia-title");
+btnAustralia.addEventListener("click", funcbtnAustralia)
+function funcbtnAustralia() {
+  btnAustralia.classList.toggle("btn-active")
+  AustraliaLine.classList.toggle("main__section-Civ-Packs-Australia-line-Active")
+  AustraliaTitle.classList.toggle("main__section-Civ-Packs-Australia-title-Active")
+  if (btnAustralia.classList.contains("btn-active")) {
+    selectedNations.push(Australia)
+  } else {
+    let AustraliaPosition = selectedNations.indexOf(Australia);
+    selectedNations.splice(AustraliaPosition,1)
+  }
+}
+
+let btnNubia = document.querySelector(".button__nubia");
+let NubiaLine = document.querySelector(".main__section-Civ-Packs-Nubia-line");
+let NubiaTitle = document.querySelector(".main__section-Civ-Packs-Nubia-title");
+btnNubia.addEventListener("click", funcbtnNubia)
+function funcbtnNubia() {
+  btnNubia.classList.toggle("btn-active")
+  NubiaLine.classList.toggle("main__section-Civ-Packs-Nubia-line-Active")
+  NubiaTitle.classList.toggle("main__section-Civ-Packs-Nubia-title-Active")
+  if (btnNubia.classList.contains("btn-active")) {
+    selectedNations.push(Nubia)
+  } else {
+    let NubiaPosition = selectedNations.indexOf(Nubia);
+    selectedNations.splice(NubiaPosition,1)
+  }
+}
+
+let btnPoland = document.querySelector(".button__poland");
+let PolandLine = document.querySelector(".main__section-Civ-Packs-Poland-line");
+let PolandTitle = document.querySelector(".main__section-Civ-Packs-Poland-title");
+btnPoland.addEventListener("click", funcbtnPoland)
+function funcbtnPoland() {
+  btnPoland.classList.toggle("btn-active")
+  PolandLine.classList.toggle("main__section-Civ-Packs-Poland-line-Active")
+  PolandTitle.classList.toggle("main__section-Civ-Packs-Poland-title-Active")
+  if (btnPoland.classList.contains("btn-active")) {
+    selectedNations.push(Poland)
+  } else {
+    let PolandPosition = selectedNations.indexOf(Poland);
+    selectedNations.splice(PolandPosition,1)
+  }
+}
+
+let btnSelectAll = document.querySelector(".main__section-btn-all");
+let btnMainDlc = document.querySelector(".main__section-main-DLC-btn");
+let btnNewFrontierPass = document.querySelector(".main__section-New-Frontier-btn");
+let btnCivPacks = document.querySelector(".main__section-Civ-Packs-btn");
+
+btnSelectAll.addEventListener("click", () => {
+  if (!btnVanila.classList.contains("btn-active")) {
+    funcBtnVanila()
+  } if (!btnRiseAndFall.classList.contains("btn-active")) {
+    funcbtnRiseAndFall()
+  } if (!btnGatheringStorm.classList.contains("btn-active")) {
+    funcbtnGatheringStorm()
+  } if (!btnPersonaPack.classList.contains("btn-active")) {
+    funcbtnPersonaPack()
+  } if (!btnByzantiumAndGaul.classList.contains("btn-active")) {
+    funcbtnByzantiumAndGaul()
+  } if (!btnMayaAndGrancolombia.classList.contains("btn-active")) {
+    funcbtnMayaAndGrancolombia()
+  } if (!btnEthiopia.classList.contains("btn-active")) {
+    funcbtnEthiopia()
+  } if (!btnKhmerAndIndonesia.classList.contains("btn-active")) {
+    funcbtnKhmerAndIndonesia()
+  } if (!btnPersiaAndMacedon.classList.contains("btn-active")) {
+    funcbtnPersiaAndMacedon()
+  } if (!btnAustralia.classList.contains("btn-active")) {
+    funcbtnAustralia()
+  } if (!btnNubia.classList.contains("btn-active")) {
+    funcbtnNubia()
+  } if (!btnPoland.classList.contains("btn-active")) {
+    funcbtnPoland()
+  } else {
+    funcBtnVanila()
+    funcbtnRiseAndFall()
+    funcbtnGatheringStorm()
+    funcbtnPersonaPack()
+    funcbtnByzantiumAndGaul()
+    funcbtnMayaAndGrancolombia()
+    funcbtnEthiopia()
+    funcbtnKhmerAndIndonesia()
+    funcbtnPersiaAndMacedon()
+    funcbtnAustralia()
+    funcbtnNubia()
+    funcbtnPoland()
+  }
+})
+
+btnMainDlc.addEventListener("click", () => {
+  if (!btnVanila.classList.contains("btn-active")) {
+    funcBtnVanila()
+  } if (!btnRiseAndFall.classList.contains("btn-active")) {
+    funcbtnRiseAndFall()
+  } if (!btnGatheringStorm.classList.contains("btn-active")) {
+    funcbtnGatheringStorm()
+  } else {
+    funcBtnVanila()
+    funcbtnRiseAndFall()
+    funcbtnGatheringStorm()
+  }
+})
+
+btnNewFrontierPass.addEventListener("click", () => {
+  if (!btnPersonaPack.classList.contains("btn-active")) {
+    funcbtnPersonaPack()
+  } if (!btnByzantiumAndGaul.classList.contains("btn-active")) {
+    funcbtnByzantiumAndGaul()
+  } if (!btnMayaAndGrancolombia.classList.contains("btn-active")) {
+    funcbtnMayaAndGrancolombia()
+  } if (!btnEthiopia.classList.contains("btn-active")) {
+    funcbtnEthiopia()
+  } else {
+    funcbtnPersonaPack()
+    funcbtnByzantiumAndGaul()
+    funcbtnMayaAndGrancolombia()
+    funcbtnEthiopia()
+  }
+})
+
+btnCivPacks.addEventListener("click", () => {
+  if (!btnKhmerAndIndonesia.classList.contains("btn-active")) {
+    funcbtnKhmerAndIndonesia()
+  } if (!btnPersiaAndMacedon.classList.contains("btn-active")) {
+    funcbtnPersiaAndMacedon()
+  } if (!btnAustralia.classList.contains("btn-active")) {
+    funcbtnAustralia()
+  } if (!btnNubia.classList.contains("btn-active")) {
+    funcbtnNubia()
+  } if (!btnPoland.classList.contains("btn-active")) {
+    funcbtnPoland()
+  } else {
+    funcbtnKhmerAndIndonesia()
+    funcbtnPersiaAndMacedon()
+    funcbtnAustralia()
+    funcbtnNubia()
+    funcbtnPoland()
+  }
+})
+
 //----------    /STEP 2    ----------
 
 
