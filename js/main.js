@@ -91,18 +91,41 @@ let btnAccept_1 = document.querySelector(".accept__button-1");
 
 let civilizations = 0;
 let players = 0;
+let civAndPlayers = 0
 
 let sectionFirst = document.querySelector(".section__first");
 let sectionFirstButton = document.querySelector(".section__first-button");
+
+let mainSectionMainDlc = document.querySelector(".main__section-main-DLC")
+let civAndPlayersBlock = document.createElement("div");
+civAndPlayersBlock.classList.add("civAndPlayersBlock");
 
 sectionFirstButton.addEventListener("click", () => {
   civilizations = document.querySelector(".section__first-select-2").value
   players = +document.querySelector(".section__first-select-1").value
   sectionFirst.classList.add("section__first-hidden")
   mainSection.classList.add("main__section-active")
+
+  civAndPlayers = +civilizations * +players;
+  checkCivPlayers()
+  // civAndPlayersBlock.innerHTML = `You must select at least ${civAndPlayers} civilizations`;
+  mainSectionMainDlc.appendChild(civAndPlayersBlock);
 })
 
-
+function checkCivPlayers() {
+  if (civAndPlayers == 1) {
+    civAndPlayersBlock.innerHTML = `You must select at least ${civAndPlayers} civilization`;
+    civAndPlayersBlock.classList.remove("civAndPlayersBlock-HIDE");
+    btnAccept_1.classList.add("accept__button-1-HIDE")
+  } else if (civAndPlayers > 1) {
+    civAndPlayersBlock.innerHTML = `You must select at least ${civAndPlayers} civilizations`;
+    civAndPlayersBlock.classList.remove("civAndPlayersBlock-HIDE");
+    btnAccept_1.classList.add("accept__button-1-HIDE")
+  } else {
+    civAndPlayersBlock.classList.add("civAndPlayersBlock-HIDE");
+    btnAccept_1.classList.remove("accept__button-1-HIDE")
+  }
+}
 //----------   /STEP 1    ----------
 //----------    STEP 2    ----------
 
@@ -114,12 +137,16 @@ function funcBtnVanila() {
   btnVanila.classList.toggle("btn-active")
   VanilaLine.classList.toggle("main__section-main-DLC-Vanila-line-Active")
   VanilaTitle.classList.toggle("main__section-main-DLC-Vanila-title-Active")
+  let VanillaLength = Object.keys(Vanilla).length
   if (btnVanila.classList.contains("btn-active")) {
     selectedNations.push(Vanilla)
+    civAndPlayers -= VanillaLength
   } else {
     let VanilaPosition = selectedNations.indexOf(Vanilla);
     selectedNations.splice(VanilaPosition, 1);
+    civAndPlayers += VanillaLength
   }
+  checkCivPlayers()
 }
 
 let btnRiseAndFall = document.querySelector(".button__rise-and-fall");
@@ -130,12 +157,16 @@ function funcbtnRiseAndFall() {
   btnRiseAndFall.classList.toggle("btn-active")
   RiseLine.classList.toggle("main__section-main-DLC-Rise-line-Active")
   RiseTitle.classList.toggle("main__section-main-DLC-Rise-title-Active")
+  let RiseAndFallLength = Object.keys(RiseAndFall).length
   if (btnRiseAndFall.classList.contains("btn-active")) {
     selectedNations.push(RiseAndFall)
+    civAndPlayers -= RiseAndFallLength
   } else {
     let riseAndFallPosition = selectedNations.indexOf(RiseAndFall);
     selectedNations.splice(riseAndFallPosition, 1);
+    civAndPlayers += RiseAndFallLength
   }
+  checkCivPlayers()
 }
 
 let btnGatheringStorm = document.querySelector(".button__gathering-storm");
@@ -146,12 +177,16 @@ function funcbtnGatheringStorm() {
   btnGatheringStorm.classList.toggle("btn-active")
   GatheringLine.classList.toggle("main__section-main-DLC-Gathering-line-Active")
   GatheringTitle.classList.toggle("main__section-main-DLC-Gathering-title-Active")
+  let GatheringStormLength = Object.keys(GatheringStorm).length
   if (btnGatheringStorm.classList.contains("btn-active")) {
     selectedNations.push(GatheringStorm)
+    civAndPlayers -= GatheringStormLength
   } else {
     let gatheringStormPosition = selectedNations.indexOf(GatheringStorm);
     selectedNations.splice(gatheringStormPosition,1)
+    civAndPlayers += GatheringStormLength
   }
+  checkCivPlayers()
 }
 
 let btnPersonaPack = document.querySelector(".button__persona-pack");
@@ -162,12 +197,16 @@ function funcbtnPersonaPack() {
   btnPersonaPack.classList.toggle("btn-active")
   PersonaLine.classList.toggle("main__section-New-Frontier-Persona-line-Active")
   PersonaTitle.classList.toggle("main__section-New-Frontier-Persona-title-Active")
+  let PersonaPackLength = Object.keys(PersonaPack).length
   if (btnPersonaPack.classList.contains("btn-active")) {
     selectedNations.push(PersonaPack)
+    civAndPlayers -= PersonaPackLength
   } else {
     let PersonaPackPosition = selectedNations.indexOf(PersonaPack);
     selectedNations.splice(PersonaPackPosition,1)
+    civAndPlayers += PersonaPackLength
   }
+  checkCivPlayers()
 }
 
 let btnByzantiumAndGaul = document.querySelector(".button__byzantium-and-gaul");
@@ -178,12 +217,16 @@ function funcbtnByzantiumAndGaul() {
   btnByzantiumAndGaul.classList.toggle("btn-active")
   ByzantiumGaulLine.classList.toggle("main__section-New-Frontier-ByzantiumGaul-line-Active")
   ByzantiumGaulTitle.classList.toggle("main__section-New-Frontier-ByzantiumGaul-title-Active")
+  let ByzantiumAndGaulLength = Object.keys(PersonaPack).length
   if (btnByzantiumAndGaul.classList.contains("btn-active")) {
     selectedNations.push(ByzantiumAndGaul)
+    civAndPlayers -= ByzantiumAndGaulLength
   } else {
     let ByzantiumAndGaulPosition = selectedNations.indexOf(ByzantiumAndGaul);
     selectedNations.splice(ByzantiumAndGaulPosition,1)
+    civAndPlayers += ByzantiumAndGaulLength
   }
+  checkCivPlayers()
 }
 
 let btnMayaAndGrancolombia = document.querySelector(".button__maya-and-gran-colombia");
@@ -194,12 +237,16 @@ function funcbtnMayaAndGrancolombia() {
   btnMayaAndGrancolombia.classList.toggle("btn-active")
   MayaGranColombiaLine.classList.toggle("main__section-New-Frontier-MayaGranColombia-line-Active")
   MayaGranColombiaTitle.classList.toggle("main__section-New-Frontier-MayaGranColombia-title-Active")
+  let MayaAndGrancolombiaLength = Object.keys(MayaAndGrancolombia).length
   if (btnMayaAndGrancolombia.classList.contains("btn-active")) {
     selectedNations.push(MayaAndGrancolombia)
+    civAndPlayers -= MayaAndGrancolombiaLength
   } else {
     let MayaAndGrancolombiaPosition = selectedNations.indexOf(MayaAndGrancolombia);
     selectedNations.splice(MayaAndGrancolombiaPosition,1)
+    civAndPlayers += MayaAndGrancolombiaLength
   }
+  checkCivPlayers()
 }
 
 let btnEthiopia = document.querySelector(".button__ethiopia");
@@ -210,12 +257,16 @@ function funcbtnEthiopia() {
   btnEthiopia.classList.toggle("btn-active")
   EthiopiaLine.classList.toggle("main__section-New-Frontier-Ethiopia-line-Active")
   EthiopiaTitle.classList.toggle("main__section-New-Frontier-Ethiopia-title-Active")
+  let EthiopiaLength = Object.keys(Ethiopia).length
   if (btnEthiopia.classList.contains("btn-active")) {
     selectedNations.push(Ethiopia)
+    civAndPlayers -= EthiopiaLength
   } else {
     let EthiopiaPosition = selectedNations.indexOf(Ethiopia);
     selectedNations.splice(EthiopiaPosition,1)
+    civAndPlayers += EthiopiaLength
   }
+  checkCivPlayers()
 }
 
 let btnKhmerAndIndonesia = document.querySelector(".button__khmer-and-indonesia");
@@ -226,12 +277,16 @@ function funcbtnKhmerAndIndonesia() {
   btnKhmerAndIndonesia.classList.toggle("btn-active")
   KhmerAndIndonesiaLine.classList.toggle("main__section-Civ-Packs-KhmerIndonesia-line-Active")
   KhmerAndIndonesiaTitle.classList.toggle("main__section-Civ-Packs-KhmerIndonesia-title-Active")
+  let KhmerAndIndonesiaLength = Object.keys(KhmerAndIndonesia).length
   if (btnKhmerAndIndonesia.classList.contains("btn-active")) {
     selectedNations.push(KhmerAndIndonesia)
+    civAndPlayers -= KhmerAndIndonesiaLength
   } else {
     let KhmerAndIndonesiaPosition = selectedNations.indexOf(KhmerAndIndonesia);
     selectedNations.splice(KhmerAndIndonesiaPosition,1)
+    civAndPlayers += KhmerAndIndonesiaLength
   }
+  checkCivPlayers()
 }
 
 let btnPersiaAndMacedon = document.querySelector(".button__persia-and-macedon");
@@ -242,12 +297,16 @@ function funcbtnPersiaAndMacedon() {
   btnPersiaAndMacedon.classList.toggle("btn-active")
   PersiaAndMacedonLine.classList.toggle("main__section-Civ-Packs-PersiaMacedon-line-Active")
   PersiaAndMacedonTitle.classList.toggle("main__section-Civ-Packs-PersiaMacedon-title-Active")
+  let PersiaAndMacedonLength = Object.keys(PersiaAndMacedon).length
   if (btnPersiaAndMacedon.classList.contains("btn-active")) {
     selectedNations.push(PersiaAndMacedon)
+    civAndPlayers -= PersiaAndMacedonLength
   } else {
     let PersiaAndMacedonPosition = selectedNations.indexOf(PersiaAndMacedon);
     selectedNations.splice(PersiaAndMacedonPosition,1)
+    civAndPlayers += PersiaAndMacedonLength
   }
+  checkCivPlayers()
 }
 
 let btnAustralia = document.querySelector(".button__australia");
@@ -258,12 +317,16 @@ function funcbtnAustralia() {
   btnAustralia.classList.toggle("btn-active")
   AustraliaLine.classList.toggle("main__section-Civ-Packs-Australia-line-Active")
   AustraliaTitle.classList.toggle("main__section-Civ-Packs-Australia-title-Active")
+  let AustraliaLength = Object.keys(Australia).length
   if (btnAustralia.classList.contains("btn-active")) {
     selectedNations.push(Australia)
+    civAndPlayers -= AustraliaLength
   } else {
     let AustraliaPosition = selectedNations.indexOf(Australia);
     selectedNations.splice(AustraliaPosition,1)
+    civAndPlayers += AustraliaLength
   }
+  checkCivPlayers()
 }
 
 let btnNubia = document.querySelector(".button__nubia");
@@ -274,12 +337,16 @@ function funcbtnNubia() {
   btnNubia.classList.toggle("btn-active")
   NubiaLine.classList.toggle("main__section-Civ-Packs-Nubia-line-Active")
   NubiaTitle.classList.toggle("main__section-Civ-Packs-Nubia-title-Active")
+  let NubiaLength = Object.keys(Nubia).length
   if (btnNubia.classList.contains("btn-active")) {
     selectedNations.push(Nubia)
+    civAndPlayers -= NubiaLength
   } else {
     let NubiaPosition = selectedNations.indexOf(Nubia);
     selectedNations.splice(NubiaPosition,1)
+    civAndPlayers += NubiaLength
   }
+  checkCivPlayers()
 }
 
 let btnPoland = document.querySelector(".button__poland");
@@ -290,12 +357,16 @@ function funcbtnPoland() {
   btnPoland.classList.toggle("btn-active")
   PolandLine.classList.toggle("main__section-Civ-Packs-Poland-line-Active")
   PolandTitle.classList.toggle("main__section-Civ-Packs-Poland-title-Active")
+  let PolandLength = Object.keys(Poland).length
   if (btnPoland.classList.contains("btn-active")) {
     selectedNations.push(Poland)
+    civAndPlayers -= PolandLength
   } else {
     let PolandPosition = selectedNations.indexOf(Poland);
     selectedNations.splice(PolandPosition,1)
+    civAndPlayers += PolandLength
   }
+  checkCivPlayers()
 }
 
 let btnSelectAll = document.querySelector(".main__section-btn-all");
@@ -402,7 +473,8 @@ btnCivPacks.addEventListener("click", () => {
 let newArray = []
 let newArray_2 = []
 
-btnAccept_1.addEventListener("click", () => {
+btnAccept_1.addEventListener("click", somefunc)
+function somefunc() {
   mainSection.classList.remove("main__section-active")
   let secondSection = document.createElement("div")
   secondSection.classList.add("second__section")
@@ -440,12 +512,36 @@ btnAccept_1.addEventListener("click", () => {
 
   newArray_2 = document.querySelectorAll(".civilizations")
 
-  //---
+  //---------------------------------------------------------------------------------------
+  secondSection.appendChild(civAndPlayersBlock);
+
+  function checkCivPlayersSecond() {
+    if (civAndPlayers == 1) {
+      civAndPlayersBlock.innerHTML = `You must unban ${civAndPlayers} civilization`;
+      civAndPlayersBlock.classList.remove("civAndPlayersBlock-HIDE");
+      btnAccept_2.classList.add("btnAccept_2-HIDE")
+    } else if (civAndPlayers > 1) {
+      civAndPlayersBlock.innerHTML = `You must unban ${civAndPlayers} civilizations`;
+      civAndPlayersBlock.classList.remove("civAndPlayersBlock-HIDE");
+      btnAccept_2.classList.add("btnAccept_2-HIDE")
+    } else {
+      civAndPlayersBlock.classList.add("civAndPlayersBlock-HIDE");
+      btnAccept_2.classList.remove("btnAccept_2-HIDE")
+    }
+  }
+
   for (let item of newArray_2) {
     item.addEventListener("click", styleCivsEvent)
     }
   function styleCivsEvent(event) {
     event.target.classList.toggle("civilization-disabled")
+    if (event.target.classList.contains("civilization-disabled")) {
+      civAndPlayers++
+      checkCivPlayersSecond()
+    } else {
+      civAndPlayers--
+      checkCivPlayersSecond()
+    }
   }
   //---
   let finalArray = []
@@ -523,4 +619,5 @@ btnAccept_1.addEventListener("click", () => {
       }
     }
   })
-});
+}
+  

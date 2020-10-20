@@ -24,14 +24,32 @@ button {
     margin: 100px 25px 50px;
 }
 
+.civAndPlayersBlock {
+    color: rgb(255, 60, 60);
+    margin-top: 50px;
+}
+
+.civAndPlayersBlock-HIDE {
+    display: none;
+}
+
+.accept__button-1-HIDE {
+    display: none;
+}
+
+.btnAccept_2-HIDE {
+    display: none;
+}
+
 .section__first-hidden {
-display: none;
+    display: none;
 }
 
 .section__first-title {
     margin-bottom: 30px;
     font-weight: 700;
     font-size: 20px;
+    user-select: none;
 }
 
 .section__first-select-1 {
@@ -95,6 +113,7 @@ display: none;
     margin-bottom: 30px;
     font-weight: 700;
     font-size: 20px;
+    user-select: none;
 }
 
 .buttons {
@@ -835,6 +854,7 @@ display: none;
     font-weight: 700;
     margin-bottom: 10px;
     font-size: 20px;
+    user-select: none;
 }
 
 .secondSection-civilizations {
