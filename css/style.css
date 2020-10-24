@@ -208,7 +208,7 @@ button {
     transition: 0.3s;
 }
 
-.main__section-main-DLC-Vanila-line {
+.banner__line {
     position: relative;
     padding: 5px 10px;
     display: inline-block;
@@ -217,16 +217,16 @@ button {
     bottom: 20px;
 }
 
-.main__section-main-DLC-Vanila-title {
+.banner__title {
     font-size: 24px;
     user-select: none;
 }
 
-.btn-active .main__section-main-DLC-Vanila-line {
+.btn-active .banner__line {
     background-color: #fff;
 }
 
-.btn-active .main__section-main-DLC-Vanila-title {
+.btn-active .banner__title {
     color: rgb(41, 41, 41);
 }
 
@@ -257,28 +257,6 @@ button {
     transition: 0.3s;
 }
 
-.main__section-main-DLC-Rise-line {
-    position: relative;
-    padding: 5px 10px;
-    display: inline-block;
-    background-color: rgb(41, 41, 41);
-    position: absolute;
-    bottom: 20px;
-}
-
-.main__section-main-DLC-Rise-title {
-    font-size: 24px;
-    user-select: none;
-}
-
-.btn-active .main__section-main-DLC-Rise-line {
-    background-color: #fff;
-}
-
-.btn-active .main__section-main-DLC-Rise-title {
-    color: rgb(41, 41, 41);
-}
-
 .main__section-main-DLC-Gathering-banner {
     width: 390px;
     height: 143px;
@@ -301,27 +279,6 @@ button {
     transition: 0.3s;
 }
 
-.main__section-main-DLC-Gathering-line {
-    position: relative;
-    padding: 5px 10px;
-    display: inline-block;
-    background-color: rgb(41, 41, 41);
-    position: absolute;
-    bottom: 20px;
-}
-
-.main__section-main-DLC-Gathering-title {
-    font-size: 24px;
-    user-select: none;
-}
-
-.btn-active .main__section-main-DLC-Gathering-line {
-    background-color: #fff;
-}
-
-.btn-active .main__section-main-DLC-Gathering-title {
-    color: rgb(41, 41, 41);
-}
 
 /* ---------- New Frontier Pass ---------- */
 
@@ -378,28 +335,6 @@ button {
     transition: 0.3s;
 }
 
-.main__section-New-Frontier-Persona-line {
-    position: relative;
-    padding: 5px 10px;
-    display: inline-block;
-    background-color: rgb(41, 41, 41);
-    position: absolute;
-    bottom: 20px;
-}
-
-.main__section-New-Frontier-Persona-title {
-    font-size: 24px;
-    user-select: none;
-}
-
-.btn-active .main__section-New-Frontier-Persona-line {
-    background-color: #fff;
-}
-
-.btn-active .main__section-New-Frontier-Persona-title {
-    color: rgb(41, 41, 41);
-}
-
 .main__section-New-Frontier-ByzantiumGaul-banner {
     width: 390px;
     height: 143px;
@@ -421,28 +356,6 @@ button {
     right: 0px;
     opacity: 0.2;
     transition: 0.3s;
-}
-
-.main__section-New-Frontier-ByzantiumGaul-line {
-    position: relative;
-    padding: 5px 10px;
-    display: inline-block;
-    background-color: rgb(41, 41, 41);
-    position: absolute;
-    bottom: 20px;
-}
-
-.main__section-New-Frontier-ByzantiumGaul-title {
-    font-size: 24px;
-    user-select: none;
-}
-
-.btn-active .main__section-New-Frontier-ByzantiumGaul-line {
-    background-color: #fff;
-}
-
-.btn-active .main__section-New-Frontier-ByzantiumGaul-title {
-    color: rgb(41, 41, 41);
 }
 
 .main__section-New-Frontier-MayaGranColombia-banner {
@@ -468,28 +381,6 @@ button {
     transition: 0.3s;
 }
 
-.main__section-New-Frontier-MayaGranColombia-line {
-    position: relative;
-    padding: 5px 10px;
-    display: inline-block;
-    background-color: rgb(41, 41, 41);
-    position: absolute;
-    bottom: 20px;
-}
-
-.main__section-New-Frontier-MayaGranColombia-title {
-    font-size: 24px;
-    user-select: none;
-}
-
-.btn-active .main__section-New-Frontier-MayaGranColombia-line {
-    background-color: #fff;
-}
-
-.btn-active .main__section-New-Frontier-MayaGranColombia-title {
-    color: rgb(41, 41, 41);
-}
-
 .main__section-New-Frontier-Ethiopia-banner {
     width: 390px;
     height: 143px;
@@ -510,28 +401,6 @@ button {
     right: 0px;
     opacity: 0.2;
     transition: 0.3s;
-}
-
-.main__section-New-Frontier-Ethiopia-line {
-    position: relative;
-    padding: 5px 10px;
-    display: inline-block;
-    background-color: rgb(41, 41, 41);
-    position: absolute;
-    bottom: 20px;
-}
-
-.main__section-New-Frontier-Ethiopia-title {
-    font-size: 24px;
-    user-select: none;
-}
-
-.btn-active .main__section-New-Frontier-Ethiopia-line {
-    background-color: #fff;
-}
-
-.btn-active .main__section-New-Frontier-Ethiopia-title {
-    color: rgb(41, 41, 41);
 }
 
 /* ---------- Civilizations Packs ---------- */
@@ -590,28 +459,6 @@ button {
     transition: 0.3s;
 }
 
-.main__section-Civ-Packs-KhmerIndonesia-line {
-    position: relative;
-    padding: 5px 10px;
-    display: inline-block;
-    background-color: rgb(41, 41, 41);
-    position: absolute;
-    bottom: 20px;
-}
-
-.main__section-Civ-Packs-KhmerIndonesia-title {
-    font-size: 24px;
-    user-select: none;
-}
-
-.btn-active .main__section-Civ-Packs-KhmerIndonesia-line {
-    background-color: #fff;
-}
-
-.btn-active .main__section-Civ-Packs-KhmerIndonesia-title {
-    color: rgb(41, 41, 41);
-}
-
 .main__section-Civ-Packs-PersiaMacedon-banner {
     width: 390px;
     height: 143px;
@@ -633,28 +480,6 @@ button {
     right: 0px;
     opacity: 0.2;
     transition: 0.3s;
-}
-
-.main__section-Civ-Packs-PersiaMacedon-line {
-    position: relative;
-    padding: 5px 10px;
-    display: inline-block;
-    background-color: rgb(41, 41, 41);
-    position: absolute;
-    bottom: 20px;
-}
-
-.main__section-Civ-Packs-PersiaMacedon-title {
-    font-size: 24px;
-    user-select: none;
-}
-
-.btn-active .main__section-Civ-Packs-PersiaMacedon-line {
-    background-color: #fff;
-}
-
-.btn-active .main__section-Civ-Packs-PersiaMacedon-title {
-    color: rgb(41, 41, 41);
 }
 
 .main__section-Civ-Packs-Australia-banner {
@@ -680,28 +505,6 @@ button {
     transition: 0.3s;
 }
 
-.main__section-Civ-Packs-Australia-line {
-    position: relative;
-    padding: 5px 10px;
-    display: inline-block;
-    background-color: rgb(41, 41, 41);
-    position: absolute;
-    bottom: 20px;
-}
-
-.main__section-Civ-Packs-Australia-title {
-    font-size: 24px;
-    user-select: none;
-}
-
-.btn-active .main__section-Civ-Packs-Australia-line {
-    background-color: #fff;
-}
-
-.btn-active .main__section-Civ-Packs-Australia-title {
-    color: rgb(41, 41, 41);
-}
-
 .main__section-Civ-Packs-Nubia-banner {
     width: 390px;
     height: 143px;
@@ -723,28 +526,6 @@ button {
     right: 0px;
     opacity: 0.2;
     transition: 0.3s;
-}
-
-.main__section-Civ-Packs-Nubia-line {
-    position: relative;
-    padding: 5px 10px;
-    display: inline-block;
-    background-color: rgb(41, 41, 41);
-    position: absolute;
-    bottom: 20px;
-}
-
-.main__section-Civ-Packs-Nubia-title {
-    font-size: 24px;
-    user-select: none;
-}
-
-.btn-active .main__section-Civ-Packs-Nubia-line {
-    background-color: #fff;
-}
-
-.btn-active .main__section-Civ-Packs-Nubia-title {
-    color: rgb(41, 41, 41);
 }
 
 .main__section-Civ-Packs-Poland-banner {
@@ -769,27 +550,6 @@ button {
     transition: 0.3s;
 }
 
-.main__section-Civ-Packs-Poland-line {
-    position: relative;
-    padding: 5px 10px;
-    display: inline-block;
-    background-color: rgb(41, 41, 41);
-    position: absolute;
-    bottom: 20px;
-}
-
-.main__section-Civ-Packs-Poland-title {
-    font-size: 24px;
-    user-select: none;
-}
-
-.btn-active .main__section-Civ-Packs-Poland-line {
-    background-color: #fff;
-}
-
-.btn-active .main__section-Civ-Packs-Poland-title {
-    color: rgb(41, 41, 41);
-}
 /* ----- */
 
 .main__section-Rise-Gathering {
