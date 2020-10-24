@@ -185,21 +185,17 @@ button {
 /* ---------
 --------- */
 
-.main__section-main-DLC-Vanila-banner {
-    width: 800px;
-    height: 143px;
-    background-color: rgb(41, 41, 41);
+.banner {
     position: relative;
+    background-color: rgb(41, 41, 41);
     cursor: pointer;
-    margin-bottom: 20px;
 }
 
-.main__section-main-DLC-Vanila-banner::before {
+.banner::before {
     content: "";
-    background-image: url(../images/civ-sets/Vanila.jpg);
+    position: absolute;
     background-size: cover;
     background-position: center;
-    position: absolute;
     top: 0px;
     left: 0px;
     bottom: 0px;
@@ -230,6 +226,16 @@ button {
     color: rgb(41, 41, 41);
 }
 
+.main__section-main-DLC-Vanila-banner {
+    width: 800px;
+    height: 143px;
+    margin-bottom: 20px;
+}
+
+.main__section-main-DLC-Vanila-banner::before {
+    background-image: url(../images/civ-sets/Vanila.jpg);
+}
+
 .main__section-main-DLC-bottom-banners {
     display: flex;
     justify-content: space-between;
@@ -238,45 +244,19 @@ button {
 .main__section-main-DLC-Rise-banner {
     width: 390px;
     height: 143px;
-    background-color: rgb(41, 41, 41);
-    position: relative;
-    cursor: pointer;
 }
 
 .main__section-main-DLC-Rise-banner::before {
-    content: "";
     background-image: url(../images/civ-sets/Rise-Fall.jpg);
-    background-size: cover;
-    background-position: center;
-    position: absolute;
-    top: 0px;
-    left: 0px;
-    bottom: 0px;
-    right: 0px;
-    opacity: 0.2;
-    transition: 0.3s;
 }
 
 .main__section-main-DLC-Gathering-banner {
     width: 390px;
     height: 143px;
-    background-color: rgb(41, 41, 41);
-    position: relative;
-    cursor: pointer;
 }
 
 .main__section-main-DLC-Gathering-banner::before {
-    content: "";
     background-image: url(../images/civ-sets/Gathering-Storm.jpg);
-    background-size: cover;
-    background-position: center;
-    position: absolute;
-    top: 0px;
-    left: 0px;
-    bottom: 0px;
-    right: 0px;
-    opacity: 0.2;
-    transition: 0.3s;
 }
 
 
@@ -316,91 +296,39 @@ button {
 .main__section-New-Frontier-Persona-banner {
     width: 390px;
     height: 306px;
-    background-color: rgb(41, 41, 41);
-    position: relative;
-    cursor: pointer;
 }
 
 .main__section-New-Frontier-Persona-banner::before {
-    content: "";
     background-image: url(../images/civ-sets/Persona-pack.jpg);
-    background-size: cover;
-    background-position: center;
-    position: absolute;
-    top: 0px;
-    left: 0px;
-    bottom: 0px;
-    right: 0px;
-    opacity: 0.2;
-    transition: 0.3s;
 }
 
 .main__section-New-Frontier-ByzantiumGaul-banner {
     width: 390px;
     height: 143px;
-    background-color: rgb(41, 41, 41);
-    position: relative;
-    cursor: pointer;
     margin-bottom: 20px;
 }
 
 .main__section-New-Frontier-ByzantiumGaul-banner::before {
-    content: "";
     background-image: url(../images/civ-sets/Byzantium-Gaul.jpg);
-    background-size: cover;
-    background-position: center;
-    position: absolute;
-    top: 0px;
-    left: 0px;
-    bottom: 0px;
-    right: 0px;
-    opacity: 0.2;
-    transition: 0.3s;
 }
 
 .main__section-New-Frontier-MayaGranColombia-banner {
     width: 390px;
     height: 143px;
-    background-color: rgb(41, 41, 41);
-    position: relative;
-    cursor: pointer;
     margin-bottom: 20px;
 }
 
 .main__section-New-Frontier-MayaGranColombia-banner::before {
-    content: "";
     background-image: url(../images/civ-sets/Maya-Gran-Colombia.jpg);
-    background-size: cover;
-    background-position: center;
-    position: absolute;
-    top: 0px;
-    left: 0px;
-    bottom: 0px;
-    right: 0px;
-    opacity: 0.2;
-    transition: 0.3s;
 }
 
 .main__section-New-Frontier-Ethiopia-banner {
     width: 390px;
     height: 143px;
-    background-color: rgb(41, 41, 41);
-    position: relative;
-    cursor: pointer;
 }
 
 .main__section-New-Frontier-Ethiopia-banner::before {
-    content: "";
     background-image: url(../images/civ-sets/Ethiopia.jpg);
-    background-size: cover;
-    background-position: center;
-    position: absolute;
-    top: 0px;
-    left: 0px;
-    bottom: 0px;
-    right: 0px;
-    opacity: 0.2;
-    transition: 0.3s;
 }
 
 /* ---------- Civilizations Packs ---------- */
@@ -439,115 +367,50 @@ button {
 .main__section-Civ-Packs-KhmerIndonesia-banner {
     width: 390px;
     height: 143px;
-    background-color: rgb(41, 41, 41);
-    position: relative;
-    cursor: pointer;
     margin-bottom: 20px;
 }
 
 .main__section-Civ-Packs-KhmerIndonesia-banner::before {
-    content: "";
     background-image: url(../images/civ-sets/Khmer-Indonesia.jpg);
-    background-size: cover;
-    background-position: center;
-    position: absolute;
-    top: 0px;
-    left: 0px;
-    bottom: 0px;
-    right: 0px;
-    opacity: 0.2;
-    transition: 0.3s;
 }
 
 .main__section-Civ-Packs-PersiaMacedon-banner {
     width: 390px;
     height: 143px;
-    background-color: rgb(41, 41, 41);
-    position: relative;
-    cursor: pointer;
     margin-bottom: 20px;
 }
 
 .main__section-Civ-Packs-PersiaMacedon-banner::before {
-    content: "";
     background-image: url(../images/civ-sets/Persia-Macedon.jpg);
-    background-size: cover;
-    background-position: center;
-    position: absolute;
-    top: 0px;
-    left: 0px;
-    bottom: 0px;
-    right: 0px;
-    opacity: 0.2;
-    transition: 0.3s;
 }
 
 .main__section-Civ-Packs-Australia-banner {
     width: 390px;
     height: 143px;
-    background-color: rgb(41, 41, 41);
-    position: relative;
-    cursor: pointer;
     margin-bottom: 20px;
 }
 
 .main__section-Civ-Packs-Australia-banner::before {
-    content: "";
     background-image: url(../images/civ-sets/Australia.jpg);
-    background-size: cover;
-    background-position: center;
-    position: absolute;
-    top: 0px;
-    left: 0px;
-    bottom: 0px;
-    right: 0px;
-    opacity: 0.2;
-    transition: 0.3s;
 }
 
 .main__section-Civ-Packs-Nubia-banner {
     width: 390px;
     height: 143px;
-    background-color: rgb(41, 41, 41);
-    position: relative;
-    cursor: pointer;
     margin-bottom: 20px;
 }
 
 .main__section-Civ-Packs-Nubia-banner::before {
-    content: "";
     background-image: url(../images/civ-sets/Nubia.jpg);
-    background-size: cover;
-    background-position: center;
-    position: absolute;
-    top: 0px;
-    left: 0px;
-    bottom: 0px;
-    right: 0px;
-    opacity: 0.2;
-    transition: 0.3s;
 }
 
 .main__section-Civ-Packs-Poland-banner {
     width: 390px;
     height: 143px;
-    background-color: rgb(41, 41, 41);
-    position: relative;
-    cursor: pointer;
 }
 
 .main__section-Civ-Packs-Poland-banner::before {
-    content: "";
     background-image: url(../images/civ-sets/Poland.jpg);
-    background-size: cover;
-    background-position: center;
-    position: absolute;
-    top: 0px;
-    left: 0px;
-    bottom: 0px;
-    right: 0px;
-    opacity: 0.2;
-    transition: 0.3s;
 }
 
 /* ----- */
