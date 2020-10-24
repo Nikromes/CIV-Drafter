@@ -603,14 +603,15 @@ function somefunc() {
     doItCont()
 
     for (let i = 0; i < players; i++) {
-      let finalSectionCivilizations = document.createElement("div");
-      finalSectionCivilizations.classList.add("finalSection-civilizations");
-      finalAllCivs.appendChild(finalSectionCivilizations);
 
       let playerNum = document.createElement("div");
       playerNum.classList.add("player-num");
       playerNum.innerHTML = `Player ${i + 1}:`
-      finalSectionCivilizations.appendChild(playerNum);
+      finalAllCivs.appendChild(playerNum);
+      
+      let finalSectionCivilizations = document.createElement("div");
+      finalSectionCivilizations.classList.add("finalSection-civilizations");
+      finalAllCivs.appendChild(finalSectionCivilizations);
 
       for (let j = 0; j < +civilizations; j++) {
 
