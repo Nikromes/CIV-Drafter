@@ -128,9 +128,7 @@ function toggleBanners(type) {
   const filteredBanners = banners.filter(banner => !banner.classList.contains("btn-active"));
   const bannersToChange = filteredBanners.length ? filteredBanners : banners;
 
-  bannersToChange.forEach(banner => {
-    toggleBanner(banner);
-  })
+  bannersToChange.forEach(banner => toggleBanner(banner));
 }
 
 let banners = document.querySelectorAll(".banner");
@@ -240,14 +238,16 @@ function somefunc() {
   }
 
   secondSectionBtnAll.addEventListener("click", () => {
-    
-    for (let item of newArray_2) {
-      if (!item.classList.contains("civilization-disabled")) {
-        item.classList.add("civilization-disabled")
-        civAndPlayers++
-        checkCivPlayersSecond()
-      } 
-    }
+    const nations = Array.from(newArray_2);
+    const filteredNations = nations.filter(nation => !nation.classList.contains("civilization-disabled"));
+    const nationsToChange = filteredNations.length ? filteredNations : nations;
+    const modifier = filteredNations.length ? 1 : -1;
+
+    nationsToChange.forEach(nation => {
+      nation.classList.toggle("civilization-disabled");
+      civAndPlayers + modifier;
+      checkCivPlayersSecond();
+    });
   })
 
   //---
