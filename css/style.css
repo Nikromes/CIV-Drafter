@@ -217,16 +217,16 @@ button {
     bottom: 20px;
 }
 
-.main__section-main-DLC-Vanila-line-Active {
-    background-color: #fff;
-}
-
 .main__section-main-DLC-Vanila-title {
     font-size: 24px;
     user-select: none;
 }
 
-.main__section-main-DLC-Vanila-title-Active {
+.btn-active .main__section-main-DLC-Vanila-line {
+    background-color: #fff;
+}
+
+.btn-active .main__section-main-DLC-Vanila-title {
     color: rgb(41, 41, 41);
 }
 
@@ -266,16 +266,16 @@ button {
     bottom: 20px;
 }
 
-.main__section-main-DLC-Rise-line-Active {
-    background-color: #fff;
-}
-
 .main__section-main-DLC-Rise-title {
     font-size: 24px;
     user-select: none;
 }
 
-.main__section-main-DLC-Rise-title-Active {
+.btn-active .main__section-main-DLC-Rise-line {
+    background-color: #fff;
+}
+
+.btn-active .main__section-main-DLC-Rise-title {
     color: rgb(41, 41, 41);
 }
 
@@ -310,16 +310,16 @@ button {
     bottom: 20px;
 }
 
-.main__section-main-DLC-Gathering-line-Active {
-    background-color: #fff;
-}
-
 .main__section-main-DLC-Gathering-title {
     font-size: 24px;
     user-select: none;
 }
 
-.main__section-main-DLC-Gathering-title-Active {
+.btn-active .main__section-main-DLC-Gathering-line {
+    background-color: #fff;
+}
+
+.btn-active .main__section-main-DLC-Gathering-title {
     color: rgb(41, 41, 41);
 }
 
@@ -387,16 +387,16 @@ button {
     bottom: 20px;
 }
 
-.main__section-New-Frontier-Persona-line-Active {
-    background-color: #fff;
-}
-
 .main__section-New-Frontier-Persona-title {
     font-size: 24px;
     user-select: none;
 }
 
-.main__section-New-Frontier-Persona-title-Active {
+.btn-active .main__section-New-Frontier-Persona-line {
+    background-color: #fff;
+}
+
+.btn-active .main__section-New-Frontier-Persona-title {
     color: rgb(41, 41, 41);
 }
 
@@ -432,16 +432,16 @@ button {
     bottom: 20px;
 }
 
-.main__section-New-Frontier-ByzantiumGaul-line-Active {
-    background-color: #fff;
-}
-
 .main__section-New-Frontier-ByzantiumGaul-title {
     font-size: 24px;
     user-select: none;
 }
 
-.main__section-New-Frontier-ByzantiumGaul-title-Active {
+.btn-active .main__section-New-Frontier-ByzantiumGaul-line {
+    background-color: #fff;
+}
+
+.btn-active .main__section-New-Frontier-ByzantiumGaul-title {
     color: rgb(41, 41, 41);
 }
 
@@ -477,16 +477,16 @@ button {
     bottom: 20px;
 }
 
-.main__section-New-Frontier-MayaGranColombia-line-Active {
-    background-color: #fff;
-}
-
 .main__section-New-Frontier-MayaGranColombia-title {
     font-size: 24px;
     user-select: none;
 }
 
-.main__section-New-Frontier-MayaGranColombia-title-Active {
+.btn-active .main__section-New-Frontier-MayaGranColombia-line {
+    background-color: #fff;
+}
+
+.btn-active .main__section-New-Frontier-MayaGranColombia-title {
     color: rgb(41, 41, 41);
 }
 
@@ -521,16 +521,16 @@ button {
     bottom: 20px;
 }
 
-.main__section-New-Frontier-Ethiopia-line-Active {
-    background-color: #fff;
-}
-
 .main__section-New-Frontier-Ethiopia-title {
     font-size: 24px;
     user-select: none;
 }
 
-.main__section-New-Frontier-Ethiopia-title-Active {
+.btn-active .main__section-New-Frontier-Ethiopia-line {
+    background-color: #fff;
+}
+
+.btn-active .main__section-New-Frontier-Ethiopia-title {
     color: rgb(41, 41, 41);
 }
 
@@ -599,16 +599,16 @@ button {
     bottom: 20px;
 }
 
-.main__section-Civ-Packs-KhmerIndonesia-line-Active {
-    background-color: #fff;
-}
-
 .main__section-Civ-Packs-KhmerIndonesia-title {
     font-size: 24px;
     user-select: none;
 }
 
-.main__section-Civ-Packs-KhmerIndonesia-title-Active {
+.btn-active .main__section-Civ-Packs-KhmerIndonesia-line {
+    background-color: #fff;
+}
+
+.btn-active .main__section-Civ-Packs-KhmerIndonesia-title {
     color: rgb(41, 41, 41);
 }
 
@@ -644,16 +644,16 @@ button {
     bottom: 20px;
 }
 
-.main__section-Civ-Packs-PersiaMacedon-line-Active {
-    background-color: #fff;
-}
-
 .main__section-Civ-Packs-PersiaMacedon-title {
     font-size: 24px;
     user-select: none;
 }
 
-.main__section-Civ-Packs-PersiaMacedon-title-Active {
+.btn-active .main__section-Civ-Packs-PersiaMacedon-line {
+    background-color: #fff;
+}
+
+.btn-active .main__section-Civ-Packs-PersiaMacedon-title {
     color: rgb(41, 41, 41);
 }
 
@@ -689,16 +689,16 @@ button {
     bottom: 20px;
 }
 
-.main__section-Civ-Packs-Australia-line-Active {
-    background-color: #fff;
-}
-
 .main__section-Civ-Packs-Australia-title {
     font-size: 24px;
     user-select: none;
 }
 
-.main__section-Civ-Packs-Australia-title-Active {
+.btn-active .main__section-Civ-Packs-Australia-line {
+    background-color: #fff;
+}
+
+.btn-active .main__section-Civ-Packs-Australia-title {
     color: rgb(41, 41, 41);
 }
 
@@ -734,16 +734,16 @@ button {
     bottom: 20px;
 }
 
-.main__section-Civ-Packs-Nubia-line-Active {
-    background-color: #fff;
-}
-
 .main__section-Civ-Packs-Nubia-title {
     font-size: 24px;
     user-select: none;
 }
 
-.main__section-Civ-Packs-Nubia-title-Active {
+.btn-active .main__section-Civ-Packs-Nubia-line {
+    background-color: #fff;
+}
+
+.btn-active .main__section-Civ-Packs-Nubia-title {
     color: rgb(41, 41, 41);
 }
 
@@ -778,16 +778,16 @@ button {
     bottom: 20px;
 }
 
-.main__section-Civ-Packs-Poland-line-Active {
-    background-color: #fff;
-}
-
 .main__section-Civ-Packs-Poland-title {
     font-size: 24px;
     user-select: none;
 }
 
-.main__section-Civ-Packs-Poland-title-Active {
+.btn-active .main__section-Civ-Packs-Poland-line {
+    background-color: #fff;
+}
+
+.btn-active .main__section-Civ-Packs-Poland-title {
     color: rgb(41, 41, 41);
 }
 /* ----- */

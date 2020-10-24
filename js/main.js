@@ -130,13 +130,9 @@ function checkCivPlayers() {
 //----------    STEP 2    ----------
 
 let btnVanila = document.querySelector(".button__vanila");
-let VanilaLine = document.querySelector(".main__section-main-DLC-Vanila-line");
-let VanilaTitle = document.querySelector(".main__section-main-DLC-Vanila-title");
 btnVanila.addEventListener("click", funcBtnVanila)
 function funcBtnVanila() {
   btnVanila.classList.toggle("btn-active")
-  VanilaLine.classList.toggle("main__section-main-DLC-Vanila-line-Active")
-  VanilaTitle.classList.toggle("main__section-main-DLC-Vanila-title-Active")
   let VanillaLength = Object.keys(Vanilla).length
   if (btnVanila.classList.contains("btn-active")) {
     selectedNations.push(Vanilla)
@@ -150,13 +146,9 @@ function funcBtnVanila() {
 }
 
 let btnRiseAndFall = document.querySelector(".button__rise-and-fall");
-let RiseLine = document.querySelector(".main__section-main-DLC-Rise-line");
-let RiseTitle = document.querySelector(".main__section-main-DLC-Rise-title");
 btnRiseAndFall.addEventListener("click", funcbtnRiseAndFall)
 function funcbtnRiseAndFall() {
   btnRiseAndFall.classList.toggle("btn-active")
-  RiseLine.classList.toggle("main__section-main-DLC-Rise-line-Active")
-  RiseTitle.classList.toggle("main__section-main-DLC-Rise-title-Active")
   let RiseAndFallLength = Object.keys(RiseAndFall).length
   if (btnRiseAndFall.classList.contains("btn-active")) {
     selectedNations.push(RiseAndFall)
@@ -170,13 +162,9 @@ function funcbtnRiseAndFall() {
 }
 
 let btnGatheringStorm = document.querySelector(".button__gathering-storm");
-let GatheringLine = document.querySelector(".main__section-main-DLC-Gathering-line");
-let GatheringTitle = document.querySelector(".main__section-main-DLC-Gathering-title");
 btnGatheringStorm.addEventListener("click", funcbtnGatheringStorm)
 function funcbtnGatheringStorm() {
   btnGatheringStorm.classList.toggle("btn-active")
-  GatheringLine.classList.toggle("main__section-main-DLC-Gathering-line-Active")
-  GatheringTitle.classList.toggle("main__section-main-DLC-Gathering-title-Active")
   let GatheringStormLength = Object.keys(GatheringStorm).length
   if (btnGatheringStorm.classList.contains("btn-active")) {
     selectedNations.push(GatheringStorm)
@@ -190,13 +178,9 @@ function funcbtnGatheringStorm() {
 }
 
 let btnPersonaPack = document.querySelector(".button__persona-pack");
-let PersonaLine = document.querySelector(".main__section-New-Frontier-Persona-line");
-let PersonaTitle = document.querySelector(".main__section-New-Frontier-Persona-title");
 btnPersonaPack.addEventListener("click", funcbtnPersonaPack)
 function funcbtnPersonaPack() {
   btnPersonaPack.classList.toggle("btn-active")
-  PersonaLine.classList.toggle("main__section-New-Frontier-Persona-line-Active")
-  PersonaTitle.classList.toggle("main__section-New-Frontier-Persona-title-Active")
   let PersonaPackLength = Object.keys(PersonaPack).length
   if (btnPersonaPack.classList.contains("btn-active")) {
     selectedNations.push(PersonaPack)
@@ -210,13 +194,9 @@ function funcbtnPersonaPack() {
 }
 
 let btnByzantiumAndGaul = document.querySelector(".button__byzantium-and-gaul");
-let ByzantiumGaulLine = document.querySelector(".main__section-New-Frontier-ByzantiumGaul-line");
-let ByzantiumGaulTitle = document.querySelector(".main__section-New-Frontier-ByzantiumGaul-title");
 btnByzantiumAndGaul.addEventListener("click", funcbtnByzantiumAndGaul)
 function funcbtnByzantiumAndGaul() {
   btnByzantiumAndGaul.classList.toggle("btn-active")
-  ByzantiumGaulLine.classList.toggle("main__section-New-Frontier-ByzantiumGaul-line-Active")
-  ByzantiumGaulTitle.classList.toggle("main__section-New-Frontier-ByzantiumGaul-title-Active")
   let ByzantiumAndGaulLength = Object.keys(PersonaPack).length
   if (btnByzantiumAndGaul.classList.contains("btn-active")) {
     selectedNations.push(ByzantiumAndGaul)
@@ -230,13 +210,9 @@ function funcbtnByzantiumAndGaul() {
 }
 
 let btnMayaAndGrancolombia = document.querySelector(".button__maya-and-gran-colombia");
-let MayaGranColombiaLine = document.querySelector(".main__section-New-Frontier-MayaGranColombia-line");
-let MayaGranColombiaTitle = document.querySelector(".main__section-New-Frontier-MayaGranColombia-title");
 btnMayaAndGrancolombia.addEventListener("click", funcbtnMayaAndGrancolombia)
 function funcbtnMayaAndGrancolombia() {
   btnMayaAndGrancolombia.classList.toggle("btn-active")
-  MayaGranColombiaLine.classList.toggle("main__section-New-Frontier-MayaGranColombia-line-Active")
-  MayaGranColombiaTitle.classList.toggle("main__section-New-Frontier-MayaGranColombia-title-Active")
   let MayaAndGrancolombiaLength = Object.keys(MayaAndGrancolombia).length
   if (btnMayaAndGrancolombia.classList.contains("btn-active")) {
     selectedNations.push(MayaAndGrancolombia)
@@ -250,13 +226,9 @@ function funcbtnMayaAndGrancolombia() {
 }
 
 let btnEthiopia = document.querySelector(".button__ethiopia");
-let EthiopiaLine = document.querySelector(".main__section-New-Frontier-Ethiopia-line");
-let EthiopiaTitle = document.querySelector(".main__section-New-Frontier-Ethiopia-title");
 btnEthiopia.addEventListener("click", funcbtnEthiopia)
 function funcbtnEthiopia() {
   btnEthiopia.classList.toggle("btn-active")
-  EthiopiaLine.classList.toggle("main__section-New-Frontier-Ethiopia-line-Active")
-  EthiopiaTitle.classList.toggle("main__section-New-Frontier-Ethiopia-title-Active")
   let EthiopiaLength = Object.keys(Ethiopia).length
   if (btnEthiopia.classList.contains("btn-active")) {
     selectedNations.push(Ethiopia)
@@ -270,13 +242,9 @@ function funcbtnEthiopia() {
 }
 
 let btnKhmerAndIndonesia = document.querySelector(".button__khmer-and-indonesia");
-let KhmerAndIndonesiaLine = document.querySelector(".main__section-Civ-Packs-KhmerIndonesia-line");
-let KhmerAndIndonesiaTitle = document.querySelector(".main__section-Civ-Packs-KhmerIndonesia-title");
 btnKhmerAndIndonesia.addEventListener("click", funcbtnKhmerAndIndonesia)
 function funcbtnKhmerAndIndonesia() {
   btnKhmerAndIndonesia.classList.toggle("btn-active")
-  KhmerAndIndonesiaLine.classList.toggle("main__section-Civ-Packs-KhmerIndonesia-line-Active")
-  KhmerAndIndonesiaTitle.classList.toggle("main__section-Civ-Packs-KhmerIndonesia-title-Active")
   let KhmerAndIndonesiaLength = Object.keys(KhmerAndIndonesia).length
   if (btnKhmerAndIndonesia.classList.contains("btn-active")) {
     selectedNations.push(KhmerAndIndonesia)
@@ -290,13 +258,9 @@ function funcbtnKhmerAndIndonesia() {
 }
 
 let btnPersiaAndMacedon = document.querySelector(".button__persia-and-macedon");
-let PersiaAndMacedonLine = document.querySelector(".main__section-Civ-Packs-PersiaMacedon-line");
-let PersiaAndMacedonTitle = document.querySelector(".main__section-Civ-Packs-PersiaMacedon-title");
 btnPersiaAndMacedon.addEventListener("click", funcbtnPersiaAndMacedon)
 function funcbtnPersiaAndMacedon() {
   btnPersiaAndMacedon.classList.toggle("btn-active")
-  PersiaAndMacedonLine.classList.toggle("main__section-Civ-Packs-PersiaMacedon-line-Active")
-  PersiaAndMacedonTitle.classList.toggle("main__section-Civ-Packs-PersiaMacedon-title-Active")
   let PersiaAndMacedonLength = Object.keys(PersiaAndMacedon).length
   if (btnPersiaAndMacedon.classList.contains("btn-active")) {
     selectedNations.push(PersiaAndMacedon)
@@ -310,13 +274,9 @@ function funcbtnPersiaAndMacedon() {
 }
 
 let btnAustralia = document.querySelector(".button__australia");
-let AustraliaLine = document.querySelector(".main__section-Civ-Packs-Australia-line");
-let AustraliaTitle = document.querySelector(".main__section-Civ-Packs-Australia-title");
 btnAustralia.addEventListener("click", funcbtnAustralia)
 function funcbtnAustralia() {
   btnAustralia.classList.toggle("btn-active")
-  AustraliaLine.classList.toggle("main__section-Civ-Packs-Australia-line-Active")
-  AustraliaTitle.classList.toggle("main__section-Civ-Packs-Australia-title-Active")
   let AustraliaLength = Object.keys(Australia).length
   if (btnAustralia.classList.contains("btn-active")) {
     selectedNations.push(Australia)
@@ -330,13 +290,9 @@ function funcbtnAustralia() {
 }
 
 let btnNubia = document.querySelector(".button__nubia");
-let NubiaLine = document.querySelector(".main__section-Civ-Packs-Nubia-line");
-let NubiaTitle = document.querySelector(".main__section-Civ-Packs-Nubia-title");
 btnNubia.addEventListener("click", funcbtnNubia)
 function funcbtnNubia() {
   btnNubia.classList.toggle("btn-active")
-  NubiaLine.classList.toggle("main__section-Civ-Packs-Nubia-line-Active")
-  NubiaTitle.classList.toggle("main__section-Civ-Packs-Nubia-title-Active")
   let NubiaLength = Object.keys(Nubia).length
   if (btnNubia.classList.contains("btn-active")) {
     selectedNations.push(Nubia)
@@ -350,13 +306,9 @@ function funcbtnNubia() {
 }
 
 let btnPoland = document.querySelector(".button__poland");
-let PolandLine = document.querySelector(".main__section-Civ-Packs-Poland-line");
-let PolandTitle = document.querySelector(".main__section-Civ-Packs-Poland-title");
 btnPoland.addEventListener("click", funcbtnPoland)
 function funcbtnPoland() {
   btnPoland.classList.toggle("btn-active")
-  PolandLine.classList.toggle("main__section-Civ-Packs-Poland-line-Active")
-  PolandTitle.classList.toggle("main__section-Civ-Packs-Poland-title-Active")
   let PolandLength = Object.keys(Poland).length
   if (btnPoland.classList.contains("btn-active")) {
     selectedNations.push(Poland)
