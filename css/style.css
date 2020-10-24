@@ -849,8 +849,9 @@ button {
 
 .secondSection-civilizations {
     display: flex;
+    flex-wrap: wrap;
     align-items: flex-start;
-    flex-direction: column;
+    max-width: 822px;
 }
 
 .finalSection {
@@ -888,6 +889,7 @@ button {
     
     margin-left: 17px;
     margin-right: 17px;
+    width: 240px;
 }
 
 .civilization-disabled {
