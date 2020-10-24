@@ -245,7 +245,7 @@ function somefunc() {
 
     nationsToChange.forEach(nation => {
       nation.classList.toggle("civilization-disabled");
-      civAndPlayers + modifier;
+      civAndPlayers += modifier;
       checkCivPlayersSecond();
     });
   })
