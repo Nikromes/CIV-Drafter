@@ -101,121 +101,52 @@ function checkCivPlayers() {
 //----------   /STEP 1    ----------
 //----------    STEP 2    ----------
 
-document.querySelectorAll(".banner").forEach(function(banner) {
-  banner.addEventListener("click", function() {
-    const pack = data[banner.dataset.pack];
+function toggleBanner(banner) {
+  const pack = data[banner.dataset.pack];
 
-    banner.classList.toggle("btn-active");
+  banner.classList.toggle("btn-active");
 
-    if (banner.classList.contains("btn-active")) {
-      selectedNations.push(pack);
-      civAndPlayers -= pack.length;
-    } else {
-      const position = selectedNations.indexOf(pack);
-      selectedNations.splice(position, 1);
-      civAndPlayers += pack.length;
-    }
+  if (banner.classList.contains("btn-active")) {
+    selectedNations.push(pack);
+    civAndPlayers -= pack.length;
+  } else {
+    const position = selectedNations.indexOf(pack);
+    selectedNations.splice(position, 1);
+    civAndPlayers += pack.length;
+  }
 
-    checkCivPlayers()
+  checkCivPlayers();
+}
+
+function toggleBanners(type) {
+  let banners = Array.from(document.querySelectorAll(".banner"));
+
+  if (type) {
+    banners = banners.filter(banner => banner.dataset.type === type);
+  }
+
+  const filteredBanners = banners.filter(banner => !banner.classList.contains("btn-active"));
+  const bannersToChange = filteredBanners.length ? filteredBanners : banners;
+
+  bannersToChange.forEach(banner => {
+    toggleBanner(banner);
   })
-})
+}
 
+let banners = document.querySelectorAll(".banner");
 let btnSelectAll = document.querySelector(".main__section-btn-all");
 let btnMainDlc = document.querySelector(".main__section-main-DLC-btn");
 let btnNewFrontierPass = document.querySelector(".main__section-New-Frontier-btn");
 let btnCivPacks = document.querySelector(".main__section-Civ-Packs-btn");
 
-btnSelectAll.addEventListener("click", () => {
-  if (!btnVanila.classList.contains("btn-active")) {
-    funcBtnVanila()
-  } if (!btnRiseAndFall.classList.contains("btn-active")) {
-    funcbtnRiseAndFall()
-  } if (!btnGatheringStorm.classList.contains("btn-active")) {
-    funcbtnGatheringStorm()
-  } if (!btnPersonaPack.classList.contains("btn-active")) {
-    funcbtnPersonaPack()
-  } if (!btnByzantiumAndGaul.classList.contains("btn-active")) {
-    funcbtnByzantiumAndGaul()
-  } if (!btnMayaAndGrancolombia.classList.contains("btn-active")) {
-    funcbtnMayaAndGrancolombia()
-  } if (!btnEthiopia.classList.contains("btn-active")) {
-    funcbtnEthiopia()
-  } if (!btnKhmerAndIndonesia.classList.contains("btn-active")) {
-    funcbtnKhmerAndIndonesia()
-  } if (!btnPersiaAndMacedon.classList.contains("btn-active")) {
-    funcbtnPersiaAndMacedon()
-  } if (!btnAustralia.classList.contains("btn-active")) {
-    funcbtnAustralia()
-  } if (!btnNubia.classList.contains("btn-active")) {
-    funcbtnNubia()
-  } if (!btnPoland.classList.contains("btn-active")) {
-    funcbtnPoland()
-  } else {
-    funcBtnVanila()
-    funcbtnRiseAndFall()
-    funcbtnGatheringStorm()
-    funcbtnPersonaPack()
-    funcbtnByzantiumAndGaul()
-    funcbtnMayaAndGrancolombia()
-    funcbtnEthiopia()
-    funcbtnKhmerAndIndonesia()
-    funcbtnPersiaAndMacedon()
-    funcbtnAustralia()
-    funcbtnNubia()
-    funcbtnPoland()
-  }
+banners.forEach(banner => {
+  banner.addEventListener("click", () => toggleBanner(banner))
 })
 
-btnMainDlc.addEventListener("click", () => {
-  if (!btnVanila.classList.contains("btn-active")) {
-    funcBtnVanila()
-  } if (!btnRiseAndFall.classList.contains("btn-active")) {
-    funcbtnRiseAndFall()
-  } if (!btnGatheringStorm.classList.contains("btn-active")) {
-    funcbtnGatheringStorm()
-  } else {
-    funcBtnVanila()
-    funcbtnRiseAndFall()
-    funcbtnGatheringStorm()
-  }
-})
-
-btnNewFrontierPass.addEventListener("click", () => {
-  if (!btnPersonaPack.classList.contains("btn-active")) {
-    funcbtnPersonaPack()
-  } if (!btnByzantiumAndGaul.classList.contains("btn-active")) {
-    funcbtnByzantiumAndGaul()
-  } if (!btnMayaAndGrancolombia.classList.contains("btn-active")) {
-    funcbtnMayaAndGrancolombia()
-  } if (!btnEthiopia.classList.contains("btn-active")) {
-    funcbtnEthiopia()
-  } else {
-    funcbtnPersonaPack()
-    funcbtnByzantiumAndGaul()
-    funcbtnMayaAndGrancolombia()
-    funcbtnEthiopia()
-  }
-})
-
-btnCivPacks.addEventListener("click", () => {
-  if (!btnKhmerAndIndonesia.classList.contains("btn-active")) {
-    funcbtnKhmerAndIndonesia()
-  } if (!btnPersiaAndMacedon.classList.contains("btn-active")) {
-    funcbtnPersiaAndMacedon()
-  } if (!btnAustralia.classList.contains("btn-active")) {
-    funcbtnAustralia()
-  } if (!btnNubia.classList.contains("btn-active")) {
-    funcbtnNubia()
-  } if (!btnPoland.classList.contains("btn-active")) {
-    funcbtnPoland()
-  } else {
-    funcbtnKhmerAndIndonesia()
-    funcbtnPersiaAndMacedon()
-    funcbtnAustralia()
-    funcbtnNubia()
-    funcbtnPoland()
-  }
-})
+btnSelectAll.addEventListener("click", () => toggleBanners());
+btnMainDlc.addEventListener("click", () => toggleBanners("main"));
+btnNewFrontierPass.addEventListener("click", () => toggleBanners("newFrontier"));
+btnCivPacks.addEventListener("click", () => toggleBanners("others"));
 
 //----------    /STEP 2    ----------
 
