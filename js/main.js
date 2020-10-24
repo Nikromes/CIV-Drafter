@@ -491,6 +491,19 @@ function somefunc() {
   secondSection_title.innerHTML = "Ban civilizations:"
   secondSection.appendChild(secondSection_title)
 
+  // -------------------------BUTTONS-------------------------
+
+  let secondSectionBtns = document.createElement("div")
+  secondSectionBtns.classList.add("secondSection-Btns")
+  secondSection.appendChild(secondSectionBtns)
+
+  let secondSectionBtnAll = document.createElement("button")
+  secondSectionBtnAll.classList.add("secondSection-BtnAll")
+  secondSectionBtnAll.innerHTML = "Ban All"
+  secondSectionBtns.appendChild(secondSectionBtnAll)
+
+  // ------------------------/BUTTONS-------------------------
+
   let secondSection_civilizations = document.createElement("div")
   secondSection_civilizations.classList.add("secondSection-civilizations")
   secondSection.appendChild(secondSection_civilizations)
@@ -532,7 +545,7 @@ function somefunc() {
 
   for (let item of newArray_2) {
     item.addEventListener("click", styleCivsEvent)
-    }
+  }
   function styleCivsEvent(event) {
     event.target.classList.toggle("civilization-disabled")
     if (event.target.classList.contains("civilization-disabled")) {
@@ -543,6 +556,18 @@ function somefunc() {
       checkCivPlayersSecond()
     }
   }
+
+  secondSectionBtnAll.addEventListener("click", () => {
+    
+    for (let item of newArray_2) {
+      if (!item.classList.contains("civilization-disabled")) {
+        item.classList.add("civilization-disabled")
+        civAndPlayers++
+        checkCivPlayersSecond()
+      } 
+    }
+  })
+
   //---
   let finalArray = []
   btnAccept_2.addEventListener("click", () => {
@@ -608,7 +633,7 @@ function somefunc() {
       playerNum.classList.add("player-num");
       playerNum.innerHTML = `Player ${i + 1}:`
       finalAllCivs.appendChild(playerNum);
-      
+
       let finalSectionCivilizations = document.createElement("div");
       finalSectionCivilizations.classList.add("finalSection-civilizations");
       finalAllCivs.appendChild(finalSectionCivilizations);
