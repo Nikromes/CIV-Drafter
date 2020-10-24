@@ -27,6 +27,7 @@ button {
 .civAndPlayersBlock {
     color: rgb(255, 60, 60);
     margin-top: 50px;
+    user-select: none;
 }
 
 .civAndPlayersBlock-HIDE {
@@ -116,10 +117,6 @@ button {
     user-select: none;
 }
 
-.buttons {
-
-}
-
 .accept__button-1 {
     outline: none;
     border: none;
@@ -187,9 +184,6 @@ button {
 }
 /* ---------
 --------- */
-.main__section-main-DLC-container {
-
-}
 
 .main__section-main-DLC-Vanila-banner {
     width: 800px;
@@ -827,10 +821,6 @@ button {
     border-radius: 5px;
     cursor: pointer;
     transition: 0.3s;
-}
-
-.btn-active {
-
 }
 
 .btn-active::before {
