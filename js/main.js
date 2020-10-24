@@ -271,35 +271,18 @@ function somefunc() {
 
     // ---------------------------------------
 
-    let filteredMassive = []
-    let civFilteredMassive = []
+    let civFilteredMassive = [];
 
-    function randomInteger(min, max) {
-      // получить случайное число от (min-0.5) до (max+0.5)
-      let rand = min - 0.5 + Math.random() * (max - min + 1);
-      if (Math.round(rand) == -0) {
-        return 0;
-      } else {
-        return Math.round(rand);
-      }
-    }
-
-    function doIt() {
-      for (let i = 0; i < civilizations; i++) {
-        let randomNum = randomInteger(0, finalArray.length - 1);
-        if (filteredMassive.indexOf(randomNum) == -1) {
-          filteredMassive.push(randomNum)
-          civFilteredMassive.push(finalArray[randomNum])
-        } else {
-          filteredMassive.length = 0
-          civFilteredMassive.length = 0
-        }
-      }
+    function getRandonCivFromArray(array) {
+      const randomInt = Math.floor(Math.random() * array.length);
+      return array.splice(randomInt, 1)[0];
     }
 
     function doItCont() {
-      while (filteredMassive.length != civilizations * players) {
-        doIt()
+      while (civFilteredMassive.length != civilizations * players) {
+        for (let i = 0; i < civilizations; i++) {
+          civFilteredMassive.push(getRandonCivFromArray(finalArray));
+        }
       }
     }
 
