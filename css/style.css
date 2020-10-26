@@ -558,3 +558,8 @@ button {
 .civilization-disabled {
     background-color: #772a2a;
 }
+
+.hide-scrollbar {
+	overflow: -moz-hidden-unscrollable;
+	overflow: hidden;
+}

@@ -323,11 +323,13 @@ function somefunc() {
     }
     
     copyButton.addEventListener("click", () => {
+      document.documentElement.classList.add("hide-scrollbar");
       html2canvas(document.querySelector('.finalSection'), {scrollX: -window.scrollX, scrollY: -window.scrollY}).then(function(canvas) {
         canvas.toBlob((blob) => {
           navigator.clipboard.write([new ClipboardItem({'image/png': blob})])
         })
       });
+      document.documentElement.classList.remove("hide-scrollbar");
     })
   })
 }
