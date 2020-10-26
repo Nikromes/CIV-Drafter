@@ -494,3 +494,58 @@
     background-size: contain;
     margin-right: 10px;
 }
+
+.Chinese::before {
+    background-repeat: no-repeat;
+    content: "";
+    background-image: url(../images/civilizations-logo/Chinese.png);
+    display: inline-block;
+    width: 32px;
+    height: 32px;
+    background-size: contain;
+    margin-right: 10px;
+}
+
+.Brazilian::before {
+    background-repeat: no-repeat;
+    content: "";
+    background-image: url(../images/civilizations-logo/Brazilian.png);
+    display: inline-block;
+    width: 32px;
+    height: 32px;
+    background-size: contain;
+    margin-right: 10px;
+}
+
+.German::before {
+    background-repeat: no-repeat;
+    content: "";
+    background-image: url(../images/civilizations-logo/German.png);
+    display: inline-block;
+    width: 32px;
+    height: 32px;
+    background-size: contain;
+    margin-right: 10px;
+}
+
+.Scythian::before {
+    background-repeat: no-repeat;
+    content: "";
+    background-image: url(../images/civilizations-logo/Scythian.png);
+    display: inline-block;
+    width: 32px;
+    height: 32px;
+    background-size: contain;
+    margin-right: 10px;
+}
+
+.FrenchEleanor::before {
+    background-repeat: no-repeat;
+    content: "";
+    background-image: url(../images/civilizations-logo/French-Eleanora.png);
+    display: inline-block;
+    width: 32px;
+    height: 32px;
+    background-size: contain;
+    margin-right: 10px;
+}

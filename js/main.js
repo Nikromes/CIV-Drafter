@@ -16,7 +16,11 @@ const data = {
     "Russian",
     "English Victoria",
     "Japanese",
-    "Spanish"
+    "Spanish",
+    "Chinese",
+    "Brazilian",
+    "German",
+    "Scythian"
   ],
 
   riseAndFall: [
@@ -35,6 +39,7 @@ const data = {
     "Canadian",
     "Māori",
     "English Eleanor",
+    "French Eleanor",
     "Ottoman",
     "Hungarian",
     "Phoenician",
