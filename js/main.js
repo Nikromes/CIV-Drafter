@@ -323,7 +323,7 @@ function somefunc() {
     }
     
     copyButton.addEventListener("click", () => {
-      html2canvas(document.querySelector('.finalSection')).then(function(canvas) {
+      html2canvas(document.querySelector('.finalSection'), {scrollX: -window.scrollX, scrollY: -window.scrollY}).then(function(canvas) {
         canvas.toBlob((blob) => {
           navigator.clipboard.write([new ClipboardItem({'image/png': blob})])
         })
