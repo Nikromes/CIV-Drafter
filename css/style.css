@@ -477,12 +477,38 @@ button {
     max-width: 810px;
 }
 
+.sectionWrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 .finalSection {
-    margin: 100px 25px 50px;
+    margin: 100px 25px 20px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    background-color: rgb(41, 41, 41);
+    padding: 30px;
+}
+
+.copyButton {
+    display: block;
+    margin: 0 auto;
+    outline: none;
+    border: none;
+    background-color: #424242;
+    border-radius: 5px;
+    padding: 7px 15px;
+    cursor: pointer;
+    font-weight: 700;
+    color: white;
+    transition: 0.3s;
+}
+
+.copyButton:hover {
+    background-color: rgb(71, 135, 255);
 }
 
 .finalSection-title {
@@ -536,4 +562,9 @@ button {
 
 .civilization-disabled {
     background-color: #772a2a;
+}
+
+.hide-scrollbar {
+	overflow: -moz-hidden-unscrollable;
+	overflow: hidden;
 }

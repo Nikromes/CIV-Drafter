@@ -266,8 +266,15 @@ function somefunc() {
     secondSection.classList.add("second__section-hidden")
 
     let finalSection = document.createElement("div")
+    let sectionWrapper = document.createElement("div")
+    let copyButton = document.createElement("button")
     finalSection.classList.add("finalSection")
-    document.body.appendChild(finalSection)
+    sectionWrapper.classList.add("sectionWrapper")
+    copyButton.classList.add("copyButton")
+    copyButton.innerText = "Copy to Clipboard"
+    document.body.append(sectionWrapper)
+    sectionWrapper.append(finalSection)
+    sectionWrapper.after(copyButton)
 
     let finalSectionTitle = document.createElement("div")
     finalSectionTitle.innerHTML = "Result of randomize:"
@@ -314,6 +321,16 @@ function somefunc() {
         finalSectionCivilizations.appendChild(civFilteredMassive.pop());
       }
     }
+    
+    copyButton.addEventListener("click", () => {
+      document.documentElement.classList.add("hide-scrollbar");
+      html2canvas(document.querySelector('.finalSection'), {scrollX: -window.scrollX, scrollY: -window.scrollY}).then(function(canvas) {
+        canvas.toBlob((blob) => {
+          navigator.clipboard.write([new ClipboardItem({'image/png': blob})])
+        })
+      });
+      document.documentElement.classList.remove("hide-scrollbar");
+    })
   })
 }
   
