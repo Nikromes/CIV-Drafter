@@ -484,12 +484,13 @@ button {
 }
 
 .finalSection {
-    margin: 100px 25px 50px;
+    margin: 100px 25px 20px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     background-color: rgb(41, 41, 41);
+    padding: 30px;
 }
 
 .copyButton {
@@ -504,6 +505,10 @@ button {
     font-weight: 700;
     color: white;
     transition: 0.3s;
+}
+
+.copyButton:hover {
+    background-color: rgb(71, 135, 255);
 }
 
 .finalSection-title {
